@@ -52,4 +52,39 @@ function kgToLbs(weight) {
 ;
 console.log(kgToLbs(10));
 console.log(kgToLbs('10kg'));
+let textBox = {
+    drag: () => { },
+    resize: () => { }
+};
+let quantity = 50;
+function greet(name) {
+    if (name) {
+        console.log(name.toUpperCase());
+    }
+    else
+        console.log('Hola');
+}
+;
+greet('yoni');
+greet(null);
+greet(undefined);
+let fruitOne = {
+    name: 'Mango',
+    taste: 'Sweet',
+    color: 'Yellow',
+    allSeason: false,
+    price: 10
+};
+let fruitTwo = {
+    name: 'Orange',
+    taste: 'Sweet-tart',
+    color: 'Orange',
+    allSeason: false
+};
+function getPrice(price) {
+    return price + 2.6;
+}
+;
+console.log(getPrice(fruitOne.price));
+console.log(getPrice(fruitTwo.price));
 //# sourceMappingURL=index.js.map

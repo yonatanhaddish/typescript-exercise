@@ -110,3 +110,64 @@ let textBox: UIWidget = {
     drag: () => {},
     resize: () => {}
 };
+// -------------------------------------------------------------
+// literal types (exact or specific)
+// -------------------------------------------------------------
+type Quantity = 50 | 100;
+let quantity: Quantity = 50; // true
+// let quantity02: Quantity = 101 // false (error) 
+
+type Metric = 'cm' | 'inch';
+// -------------------------------------------------------------
+// nullable types (null or undefined values)
+// -------------------------------------------------------------
+function greet(name: string | null | undefined) {
+    if (name) {
+        console.log(name.toUpperCase());
+    }
+    else    
+    console.log('Hola');
+    
+};
+greet('yoni');
+greet(null);
+greet(undefined);
+// -------------------------------------------------------------
+// optional property access operator,
+// optional element access operator,
+// optional call
+// NaN
+// -------------------------------------------------------------
+ type Fruit = {
+    name: string,
+    taste: string,
+    color: string,
+    allSeason: boolean,
+    price?: number | undefined
+ };
+
+ let fruitOne: Fruit = {
+    name: 'Mango',
+    taste: 'Sweet',
+    color: 'Yellow',
+    allSeason: false,
+    price: 10
+ };
+ let fruitTwo: Fruit = {
+    name: 'Orange',
+    taste: 'Sweet-tart',
+    color: 'Orange',
+    allSeason: false
+ };
+
+ function getPrice(price: number) {
+    return price + 2.6;
+ };
+ console.log(getPrice(fruitOne.price!));
+ console.log(getPrice(fruitTwo.price!));
+ 
+
+//  console.log(fruitOne.price);
+//  console.log(fruitTwo.price);
+
+ 
