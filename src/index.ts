@@ -1,6 +1,7 @@
 // -------------------------------------------------------------
 // primitives
 // -------------------------------------------------------------
+let sales: number = 123_456_789;
 let sales02 = 123_456_789;
 
 let course: string = "TypeScript";
@@ -20,4 +21,19 @@ numbers.forEach(n => console.log(n.toExponential))
 // -------------------------------------------------------------
 let user: [number, string] = [1, 'Yoni'];
 // -------------------------------------------------------------
+// enums
+// -------------------------------------------------------------
+const small = 1;
+const medium = 2;
+const large = 3;
+
+const enum Size {
+    Small = 1,
+    Medium, // by default Medium will be 2, which is the number coming after 1
+    Large   // by default Large will be 3, which is the number coming after 2
+}
+let mySize: Size = Size.Large;
+console.log(mySize);
+// -------------------------------------------------------------
+// functions
 // -------------------------------------------------------------
