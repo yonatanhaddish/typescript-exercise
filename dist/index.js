@@ -21,10 +21,24 @@ function calculateTax(income, taxYear = 2020) {
     return income * 1.3;
 }
 console.log(calculateTax(10000));
-let employee = {
+let employee01 = {
     id: 1,
     name: 'Mosh',
     retire: (date) => { console.log(date); }
 };
-console.log(employee);
+console.log(employee01);
+let employee02 = {
+    id: 1,
+    name: 'Mosh',
+    retire: (date) => {
+        console.log(date);
+    }
+};
+let employee03 = {
+    id: 2,
+    name: 'Yon',
+    retire: (date) => {
+        console.log(date);
+    }
+};
 //# sourceMappingURL=index.js.map

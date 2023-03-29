@@ -45,9 +45,9 @@ function calculateTax(income: number, taxYear = 2020): number {
 }
 console.log(calculateTax(10000));
 // -------------------------------------------------------------
-// objects
+// objects (NOT RECOMMENDED)
 // -------------------------------------------------------------
-let employee: {
+let employee01: {
     readonly id: number,
     name: string,
     retire: (date: Date) => void
@@ -57,4 +57,26 @@ let employee: {
     retire: (date: Date) => { console.log(date) }
     
 }
-console.log(employee);
+console.log(employee01);
+// -------------------------------------------------------------
+// objects (RECOMMENDED)
+// -------------------------------------------------------------
+type Employee = {
+    readonly id: number,
+    name: string,
+    retire: (date: Date) => void
+}
+let employee02: Employee = {
+    id: 1,
+    name: 'Mosh',
+    retire: (date: Date) => {
+        console.log(date);
+    }
+};
+let employee03: Employee = {
+    id: 2,
+    name: 'Yon',
+    retire: (date: Date) => {
+        console.log(date);
+    }
+}
